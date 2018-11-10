@@ -22,6 +22,7 @@ Route::group(['domain' => 'admin.' . env('APP_DOMAIN'), 'namespace' => 'Admin', 
         Route::resource('article', 'ArticleController');
         Route::resource('article-category', 'ArticleCategoryController');
         Route::resource('link', 'LinkController');
+        Route::resource('set', 'SetController');
     });
 });
 

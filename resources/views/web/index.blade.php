@@ -10,22 +10,23 @@
 
 @section('content')
     <div class="peanut-introduce">
+        <?php $site_title = '花生日记'; $set = \App\Set::where('id',1)->first();?>
         <h2 class="section-title">
-            <strong>花生日记</strong>
-            -网购达人的省钱神器，创业者的理想平台
+            <strong>{{$site_title}}</strong>
+            -{{$set->content_1}}
         </h2>
         <ul class="section-content">
             <li>
-                <h5>花生日记APP介绍</h5>
-                <p>花生日记主要功能为：查找优惠少花钱，消费收益、邀请注册多生钱等。APP内栏目主要有9.9包邮，品牌闪购，新人免单福利，花生小店，每日爆款，拼团，信用卡，花粉社区，限时抢购等。</p>
+                <h5>{{$site_title}}APP介绍</h5>
+                <p>{{$set->content_2}}</p>
             </li>
             <li>
-                <h5>花生日记的优势</h5>
-                <p>花生日记提供海量网购优惠券，优选商品，创新模式，互利共赢。零投资！零囤货！低门槛！粉丝裂变不伤人脉，长久受益！让大家购物省钱、同时帮助更多的人轻松创业，自由生活。</p>
+                <h5>{{$site_title}}的优势</h5>
+                <p>{{$set->content_3}}</p>
             </li>
             <li>
-                <h5>花生日记的未来</h5>
-                <p>花生日记以线上几千万用户为支持，打造社交新零售生态系统，让线上店铺，实体店商家、消费者一起实现多方共赢，为大家创造价值，欢迎各方有志之士加入花生日记！共创美好的明天！</p>
+                <h5>{{$site_title}}的未来</h5>
+                <p>{{$set->content_3}}</p>
             </li>
         </ul>
     </div>

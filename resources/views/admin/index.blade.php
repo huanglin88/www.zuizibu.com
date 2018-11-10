@@ -58,58 +58,36 @@
             </div>
             <ul class="sidebar-menu MA_menu" data-widget="tree">
 
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-user-o"></i> <span>用户</span>
-                        <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li>
-                            <a href="{{ route('admin.user.index') }}"
-                               data-tab='@json(['name' => 'menu_user', 'text' => '用户'])'><i
-                                        class="fa fa-users"></i>
-                                用户</a></li>
-                    </ul>
+                <li>
+                    <a href="{{ route('admin.user.index') }}"
+                       data-tab='@json(['name' => 'menu_user', 'text' => '用户'])'><i
+                                class="fa fa-users"></i>
+                        用户</a>
+                </li>
+                <li>
+                    <a href="/set/1/edit"
+                       data-tab='@json(['name' => 'menu_set', 'text' => '设置'])'><i
+                                class="fa fa-toggle-on"></i>
+                        <span>设置</span></a>
                 </li>
 
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-pencil-square-o"></i> <span>资讯模块</span>
-                        <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li>
-                            <a href="{{ route('admin.article.index') }}"
-                               data-tab='@json(['name' => 'menu_article', 'text' => '资讯'])'><i
-                                        class="fa fa-newspaper-o"></i>
-                                <span>资讯</span></a>
-                        </li>
-                        <li>
-                            <a href="{{ route('admin.article-category.index') }}"
-                               data-tab='@json(['name' => 'menu_article-category', 'text' => '资讯分类'])'><i
-                                        class="fa fa-tags"></i>
-                                <span>资讯分类</span></a>
-                        </li>
-                    </ul>
+                <li>
+                    <a href="{{ route('admin.article.index') }}"
+                       data-tab='@json(['name' => 'menu_article', 'text' => '资讯'])'><i
+                                class="fa fa-newspaper-o"></i>
+                        <span>资讯</span></a>
                 </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-toggle-on"></i> <span>设置</span>
-                        <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li>
-                            <a href="{{ route('admin.link.index') }}"
-                               data-tab='@json(['name' => 'menu_link', 'text' => '友情链接'])'><i
-                                        class="fa fa-ban"></i>
-                                友情链接</a></li>
-                    </ul>
+                <li>
+                    <a href="{{ route('admin.article-category.index') }}"
+                       data-tab='@json(['name' => 'menu_article-category', 'text' => '资讯分类'])'><i
+                                class="fa fa-tags"></i>
+                        <span>资讯分类</span></a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.link.index') }}"
+                       data-tab='@json(['name' => 'menu_link', 'text' => '友情链接'])'><i
+                                class="fa fa-ban"></i>
+                        友情链接</a>
                 </li>
             </ul>
         </section>
