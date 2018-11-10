@@ -142,6 +142,17 @@
                                 @endif
                             </div>
 
+                            <div class="form-group{{ $errors->has('abstract') ? ' has-error' : '' }}">
+                                <label>摘要</label>
+                                <textarea  class="form-control"
+                                          name="abstract">{{ old('abstract') }}</textarea>
+                                @if ($errors->has('abstract'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('abstract') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+
                             <div class="form-group{{ $errors->has('content') ? ' has-error' : '' }}">
                                 <label>内容</label>
                                 <textarea id="J_content" name="content">{{ old('content') }}</textarea>

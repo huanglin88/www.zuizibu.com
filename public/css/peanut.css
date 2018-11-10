@@ -1,0 +1,101 @@
+@import url('reset.css');
+html, body {
+    min-width: 1200px;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    background-color: #f3f3f3;
+}
+
+/** 花生日记 **/
+.peanut-introduce, .peanut-list, .peanut-links{
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+    padding: 30px 15px;
+    width: 1200px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+h2 {
+    font-size: 27px;
+    color: #000;
+    font-weight: 100;
+    text-align: center;
+}
+.section-title {
+    margin-top: 0;
+    letter-spacing: 2px;
+    line-height: 39px;
+    margin-bottom: 15px;
+}
+.section-title strong {
+    font-weight: bold;
+    font-size: 27px;
+}
+.section-content h5 {
+    font-size: 18px;
+    margin: 8px 0;
+}
+.section-content li{
+    float: left;
+    width: calc(33%);
+}
+.section-content li p {
+    margin: 0 30px 0 0;
+    color: #555;
+}
+
+.peanut-list > div > .fl{
+    width: calc(33% - 20px);
+    padding: 0 10px;
+}
+.peanut-list-item {
+    clear: both;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.qrcode > p {
+}
+.news-list-title {
+    font-weight: bold;
+    padding-bottom: 8px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+    margin-right: 10px;
+    color: #ff7070;
+}
+.invite-code {
+    background-color: red;
+    color: #ffe086;
+    text-align: center;
+    padding-top: 50px!important;
+    min-height: 235px;
+}
+.invite-code > p > b {
+    font-size: 20px;
+}
+
+.peanut-links-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.peanut-links > div {
+    width: calc(33% - 50px);
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    margin: 0 11px;
+}
+.peanut-links > div ul, .peanut-list-item ul  {
+    padding-left: 20px;
+}
+.peanut-links > div li, .peanut-list-item li {
+    list-style: disc;
+}
+.peanut-links > div li:hover, .peanut-list-item li:hover {
+    color: #227bec;
+    cursor: pointer;
+}
+
+.peanut-links .contact {
+    min-height: 147px;
+}

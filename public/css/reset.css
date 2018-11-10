@@ -1,0 +1,147 @@
+
+html,body{ width:100%;background-color:#fff;overflow-x:hidden}
+html,body,a,h1,h2,h3,h4,h5,h6,p,div,ul,li,ol,dl,dt,dd,img,form,input,textarea,select,fieldset{ margin:0px; padding:0px; list-style-type:none; }
+h1,h2,h3,h4,h5,h6,b,strong{ font:14px/1.25 Microsoft Yahei,Helvetica,sans-serif;;}
+body,input,select{ font:14px/1.25 Microsoft Yahei,Helvetica,sans-serif; border:0; }
+div,span,th,td,dt,dd,h1,h2,h3,h4,h5,h6,em,strong,i,a,b,a,p{ }
+ul,ol,dl,dt,dd{ list-style-type:none; }
+select,input{ vertical-align:middle; }
+img{ border:0 none; text-align:absmiddle; background-color:transparent; }
+a{ color:#666; text-decoration:none; }
+.xq-nr a{color:#3694BB}
+a:hover{ color:#f54365;}
+ img:hover {
+    transform: scale(1.04, 1.04);
+    -ms-transform: scale(1.04, 1.04);
+    -webkit-transform: scale(1.04, 1.04);
+	transition:0.5s transform;
+}
+.wp{width:1200px;margin:0 auto;}
+.l{ float: left; }
+.r{ float: right; }
+
+.cursor{
+    cursor: pointer;
+}
+.cursor:hover{
+    color: #2b79ff;
+}
+.none{
+    display: none;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+ul,ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+p {
+    margin: 5px 0;
+}
+.text-center {
+    text-align: center;
+}
+.red {
+    color: red;
+}
+
+@font-face{src:url(fonts/element-icons.woff) format("woff"),url(fonts/element-icons.ttf) format("truetype");font-weight:400;font-style:normal}
+
+body{ color:#333;font:"14px/1.25 Microsoft Yahei,Helvetica,sans-serif;";}
+/* header */
+.header{background:#000;width:100%;}
+.nav{height:60px;}
+.nav a{font-size:18px;float:left;display:block;height:;padding:0;}
+.nav a:hover{/* background:url(../images/hongsejt.png) center bottom no-repeat; */color:#f54365;}
+.nav ul{width:120%;}
+.nav ul li{position:relative;float:left;}
+.nav ul li:hover .border{left:0;width:100%;}
+.nav a{width:auto;height:60px;line-height:60px;color:#fff;margin-right:85px;}
+/* header */
+
+/** footer **/
+.footer {
+    text-align: center;
+    color: #fff;
+    background-color: #1f1f1f;
+    padding: 15px 0;
+    line-height: 28px;
+}
+.footer > div > a {
+    margin: 0 8px;
+    text-decoration: none;
+    color: #fff;
+}
+
+/** pagination **/
+.pagination {
+    white-space: nowrap;
+    padding: 2px 5px;
+    color: #303133;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 700;
+}
+.pagination button:disabled {
+    color: #c0c4cc;
+    background-color: #fff;
+    cursor: not-allowed;
+}
+.pagination .btn-prev {
+    padding-right: 12px;
+}
+
+.pagination .btn-next {
+    padding-left: 12px;
+}
+.pagination .btn-next, .pagination .btn-prev {
+    background: 50% no-repeat;
+    background-color: rgba(0, 0, 0, 0);
+    background-size: auto auto;
+    background-size: 16px;
+    background-color: #fff;
+    cursor: pointer;
+    margin: 0;
+    color: #303133;
+}
+.pagination .pager {
+    list-style: none;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+}
+.pager li.active {
+    color: #409eff;
+    cursor: default;
+}
+.pager li {
+    padding: 0 4px;
+    background: #fff;
+    vertical-align: top;
+    display: inline-block;
+    font-size: 13px;
+    min-width: 35.5px;
+    height: 28px;
+    line-height: 28px;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0;
+}
+.pagination button {
+    border: none;
+    padding: 0 6px;
+    padding-right: 6px;
+    background: transparent;
+    height: 28px;
+    padding: 0 12px;
+    font-size: 22px;
+    line-height: 28px;
+}

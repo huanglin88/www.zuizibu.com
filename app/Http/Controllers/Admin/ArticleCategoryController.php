@@ -45,18 +45,15 @@ class ArticleCategoryController extends Controller
 
             $category = new ArticleCategory;
 
-            $fields = ['name', 'slug', 'content', 'sort'];
+            $fields = ['name', 'slug', 'content', 'sort','logo','invitation_code','code_img','android_download_url','ios_download_url'];
             foreach ($fields as $field) {
                 if ($request->has($field)) {
                     $category->$field = $request->input($field);
                 }
             }
             $category->save();
-
-
             DB::commit();
             Notification::success('分类创建成功');
-            $request->session()->flash('script', "MA_menuRename('module_create-category', 'module_edit-category-$category->id', '编辑分类')");
 
             return redirect()->route('admin.article-category.edit', $category);
         } catch (\Exception $e) {
@@ -93,7 +90,7 @@ class ArticleCategoryController extends Controller
         try {
             DB::beginTransaction();
 
-            $fields = ['name', 'slug', 'content', 'sort'];
+            $fields = ['name', 'slug', 'content', 'sort','logo','invitation_code','code_img','android_download_url','ios_download_url'];
             foreach ($fields as $field) {
                 if ($request->has($field)) {
                     $category->$field = $request->input($field);

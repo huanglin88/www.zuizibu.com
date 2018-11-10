@@ -38,6 +38,7 @@ class ArticleController extends Controller
         $this->validate($request, [
             'article_category_id' => ['required', 'exists:article_categories,id'],
             'title' => ['required'],
+            'abstract' => ['required'],
             'slug' => ['required', 'unique:articles'],
             'content' => ['required'],
         ]);
@@ -46,7 +47,7 @@ class ArticleController extends Controller
             DB::beginTransaction();
 
             $article = new Article;
-            $fields = ['article_category_id', 'title', 'slug', 'cover', 'content', 'sort'];
+            $fields = ['article_category_id', 'title', 'slug', 'cover', 'content', 'sort','abstract'];
             foreach ($fields as $field) {
                 if ($request->has($field)) {
                     $article->$field = $request->input($field);
@@ -88,6 +89,7 @@ class ArticleController extends Controller
         $this->validate($request, [
             'article_category_id' => ['required', 'exists:article_categories,id'],
             'title' => ['required'],
+            'abstract' => ['required'],
             'slug' => ['required', Rule::unique('articles')->ignore($article->id)],
             'content' => ['required'],
         ]);
@@ -95,7 +97,7 @@ class ArticleController extends Controller
         try {
             DB::beginTransaction();
 
-            $fields = ['article_category_id', 'title', 'slug', 'cover', 'content', 'sort'];
+            $fields = ['article_category_id', 'title', 'slug', 'cover', 'content', 'sort','abstract'];
             foreach ($fields as $field) {
                 if ($request->has($field)) {
                     $article->$field = $request->input($field);

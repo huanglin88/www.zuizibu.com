@@ -18,32 +18,10 @@ class ArticleController extends Controller
             $articleQuery->whereHas('category', function ($query) use ($slug) {
                 $query->where('slug', $slug);
             });
+            $data['category'] = ArticleCategory::where('slug',$slug)->first();
         }
-
-        if (!empty($request->input('key'))) {
-            $articleQuery->where('title', 'like', '%' . $request->key . '%');
-        }
-
-
         $data['articles'] = $articleQuery->paginate(2);
-        $data['categories'] = ArticleCategory::all();
 
-        //热点资讯
-        $data['WIDGETS']['hottest'] = Article::orderBy('views', 'DESC')->take(10)->get();
-
-        //就业指南
-        $data['article_guide'] = Article::select('slug', 'title')
-            ->orderBy('created_at', 'desc')
-            ->where('article_category_id', 1)
-            ->take(10)
-            ->get();
-
-        //认证考试
-        $data['article_exam'] = Article::select('slug', 'title')
-            ->orderBy('created_at', 'desc')
-            ->where('article_category_id', 1)
-            ->take(10)
-            ->get();
 
         return view('web.article.index', $data);
     }
@@ -59,9 +37,7 @@ class ArticleController extends Controller
         $article->increment('views');
 
         $data['article'] = $article;
-
-        $data['WIDGETS']['hottest'] = Article::orderBy('views', 'DESC')->take(10)->get();
-        $data['WIDGETS']['related'] = Article::inRandomOrder()->take(4)->get();
+        $data['category'] = ArticleCategory::where('id',$article->article_category_id)->first();
 
         return view('web.article.show', $data);
     }

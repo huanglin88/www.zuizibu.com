@@ -23,6 +23,7 @@ class CreateArticlesTable extends Migration
             $table->string('slug');
             $table->string('cover')->nullable();
             $table->text('content');
+            $table->text('abstract')->comment('摘要');
             $table->unsignedTinyInteger('sort')->default(0)->comment('排序权重 越大越靠前 255最大');
             $table->timestamps();
             $table->softDeletes();

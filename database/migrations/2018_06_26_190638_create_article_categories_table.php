@@ -17,10 +17,14 @@ class CreateArticleCategoriesTable extends Migration
     {
         Schema::create('article_categories', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('parent_id')->default(0);
             $table->string('name', 50)->comment('名称');
             $table->string('slug');
-            $table->text('content');
+            $table->string('logo')->comment('LOG图')->nullable();
+            $table->string('invitation_code')->comment('邀请码')->nullable();
+            $table->string('code_img')->comment('下载二维码')->nullable();
+            $table->string('android_download_url')->comment('安卓下载地址')->nullable();
+            $table->string('ios_download_url')->comment('IOS下载地址')->nullable();
+            $table->text('content')->nullable();
             $table->unsignedTinyInteger('sort')->default(0)->comment('排序权重 越大越靠前 255最大');
             $table->timestamps();
             $table->softDeletes();
