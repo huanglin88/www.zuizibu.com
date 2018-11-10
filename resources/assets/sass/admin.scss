@@ -1,0 +1,53 @@
+// noty
+@import "~noty/src/noty.scss";
+@import "~noty/src/themes/mint.scss";
+
+.MA_iframe {
+  .note-editor .form-group {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.MA_tabs {
+  .nav-tabs-custom {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+
+  .nav-tabs-custom > .nav-tabs {
+    border-radius: 0;
+    overflow: hidden;
+    height: 44px;
+  }
+
+  .nav-tabs-custom > .nav-tabs > li > a > button {
+    border: 0;
+    padding: 0;
+    outline: none;
+    background: none;
+    margin-left: 5px;
+  }
+
+  .nav-tabs-custom > .nav-tabs > li.active > a {
+    border-bottom: 0;
+  }
+
+  .nav-tabs-custom > .tab-content {
+    padding: 0;
+    border-radius: 0;
+    overflow-y: scroll;
+    height: calc(100vh - 145px);
+  }
+
+  .nav-tabs-custom > .tab-content > .tab-pane {
+    height: 100%;
+  }
+
+  .nav-tabs-custom > .tab-content > .tab-pane > iframe {
+    height: 100%;
+    width: 100%;
+    border: 0;
+    display: block;
+  }
+}
