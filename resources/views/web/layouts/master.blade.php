@@ -24,7 +24,7 @@
             <ul class="nav1">
                 <li><a href="/">首页</a></li>
                 @foreach(\App\ArticleCategory::select('slug','name')->get() as $category)
-                <li><a href="/article/category/{{$category->slug}}">{{$category->name}}</a></li>
+                    <li><a href="/article/category/{{$category->slug}}">{{$category->name}}</a></li>
                 @endforeach
             </ul>
         </div>
@@ -33,14 +33,13 @@
 @yield('content')
 
 <div class="footer">
+    友情链接
     <div>
-        <a href="">关于我们</a>
-        <a href="">联系我们</a>
-        <a href="">工作机会</a>
-        <a href="">商务合作</a>
-        <a href="">法律声明</a>
+        @foreach(\App\Link::orderBy('id','DESC')->get() as $link)
+            <a href="{{$link->url}}" target="_blank">{{$link->name}}</a>
+        @endforeach
     </div>
-    <p>版权所有 2018  |</p>
+    <p>版权所有 2018 |</p>
 </div>
 @yield('js')
 @yield('script')
